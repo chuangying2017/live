@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model\Live;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -9,7 +9,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    const STATUS_ACTIVE = 'active';
+    const STATUS_INACTIVE = 'inactive';
+    const STATUS_DELETE = 'delete';
 
+    const USER_TYPE_ADMIN = 'admin';
+    const USER_TYPE_CONSUMER = 'consumer';
     /**
      * The attributes that are mass assignable.
      *

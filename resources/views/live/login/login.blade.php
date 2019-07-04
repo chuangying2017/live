@@ -30,39 +30,5 @@
 
 	<script>
 
-		$('input[name="authCode"]').keydown(function(e) {
-			if(e.keyCode == 13){
-				$('#login').trigger('click');
-			}
-		})
-
-		$(document).on('click','#login',function(){
-			var email = $('input[name="email"]').val(),
-				password = $('input[name="password"]').val(),
-				belong_to = 10895,
-				token = window.token,
-				sessionId = window.sessionId,
-				sig = window.sig;
-			if (!token || !sessionId || !sig) {
-				return;
-			}
-			$.post('/?c=session&a=login',{email:email,password:password,loginType: is_primary_account ? "" : "actManager", belong_to: belong_to, token: token, sig: sig, sessionId: sessionId, scene: 'ic_login' },function(data){
-				if(data.status == 'y'){
-					$('.error-tip').text();
-					location.href = "/console";
-				}else {
-					ic.reset();
-					if(data.Flag == 101 || data.Flag == 102){
-						$('.error-tip').text('用户名或密码错误');
-					}else if(data.Flag == 103){
-						$('.error-tip').text('验证码错误');
-					}else if(data.Flag === 105) {
-						$('.error-tip').text('用户名或密码为空');
-					}else {
-						$('.error-tip').text(data.info);
-					}
-				}
-			},'json')
-		});
 	</script>
 </body>
