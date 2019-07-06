@@ -9,7 +9,7 @@
             <span></span>
             <img src="http://cdn13.mudu.tv/assets/upload/147070875483629.png" alt="">
         </div>
-        <img src="{{asset('static/images/web/shadow.png')}}" alt="" class="shadow-img">
+        <img src="{{asset('live/front_end/static/images/web/shadow.png')}}" alt="" class="shadow-img">
         <div class="login-input-wrap">
             <p class="clearfix"><span>用户名:</span><input type="text" name="username"></p>
             <p class="clearfix"><span>密&nbsp;码:</span><input type="password" name="password"></p>
@@ -24,10 +24,10 @@
     </div>
 </div>
 
-<script type="text/javascript" src="{{asset('lib/jquery/1.9.1/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('lib/jquery-ui/1.9.1/jquery-ui.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('static/js/H-ui.js')}}"></script>
-<script type="text/javascript" src="{{asset('lib/layer/2.4/layer.js')}}"></script>
+<script type="text/javascript" src="{{asset('live/front_end/lib/jquery/1.9.1/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('live/front_end/lib/jquery-ui/1.9.1/jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('live/front_end/static/js/H-ui.js')}}"></script>
+<script type="text/javascript" src="{{asset('live/front_end/lib/layer/2.4/layer.js')}}"></script>
 <script type="text/javascript">
 
     //刷新验证码

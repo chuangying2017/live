@@ -15,7 +15,10 @@ Route::get('/', function(){
 });
 Route::group(['prefix'=>'live'], function(){
 
-    Route::get('login', 'Auth\LoginController@showLoginForm')->name('live.login_show');
+    Route::group(['namespace' => 'Auth'], function(){
+        Route::get('login', 'LoginController@showLoginForm')->name('live.login_show');
+        Route::get('logout', 'LoginController@logout')->name('live.logout');
+    });
 
 
 
