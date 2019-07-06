@@ -10,7 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    dd('welcome to chi');
+});
+Route::group(['prefix'=>'live'], function(){
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::get('login', 'Auth\LoginController@showLoginForm')->name('live.login_show');
+
+
+
 });
