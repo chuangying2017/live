@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/index/index';
+    protected $redirectTo = '/live/index/index';
 
     /**
      * Create a new controller instance.
@@ -60,6 +60,11 @@ class LoginController extends Controller
         }
 
         return $result;
+    }
+
+    public function username()
+    {
+        return 'username';
     }
 
     public function loggedOut()
